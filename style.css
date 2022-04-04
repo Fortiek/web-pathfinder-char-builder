@@ -1,0 +1,18 @@
+:root{
+    margin: 0;
+    --prefers-light-bg: #cfcfcf;
+    --prefers-dark-bg: #222;
+    font-size: 16px;
+}
+body{
+    padding: 1em 2em;
+    background-color: var(--prefers-dark-bg);
+    color: var(--prefers-light-bg);
+}
+h1{
+    text-align: center;
+    font-weight: 300;
+}
+.attr-result li{
+    list-style: none;
+}
