@@ -1,16 +1,8 @@
+import {Dwarf, Elf} from './_data/character.js';
+
 //where attribute results display in the document
 const result = document.querySelector('.attr-result');
 const attrSelection = document.querySelector('select');
-
-//attributes object; may want to convert entire character's into obj
-const attributes = {
-    STR : 10,
-    CON : 10,
-    DEX : 10,
-    WIS : 10,
-    INT : 10,
-    CHA : 10
-};
 
 //listen for change on selector element --Change to submit button later--
 attrSelection.addEventListener('change', () => {
@@ -33,8 +25,8 @@ function pointBuy(points) {
     for(const stat in attributes){
         result.innerHTML += `
             <li> 
-                <span class="minus-${stat}" style="border:1px solid white">-</span>
-                <span class="plus-${stat}" style="border:1px solid white">+</span>
+                <span class="att-button minus minus-${stat}">-</span>
+                <span class="att-button plus plus-${stat}">+</span>
                 ${stat}: ${attributes[stat]}
             </li>`;
     }
@@ -58,9 +50,7 @@ function pointBuy(points) {
 function diceRoll() {
     
     if(result.hasChildNodes()){
-        while(result.firstChild){
-            result.removeChild(result.firstChild);
-        }
+        result.innerHTML = "";
     }
 
     function determineScore() {
