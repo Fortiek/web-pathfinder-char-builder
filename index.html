@@ -10,16 +10,27 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+<header class="page-header">
     <h1>Pathfinder</h1>
+    <p>
+        This tool will help you build out your first Pathfinder first edition character to play!
+    </p>
+</header>
 
-    <label for="attribute-allocation">Select your attribute allocation method:</label>
-    <select name="attribute-allocation">
-        <option value="point-buy">Point Buy</option>
-        <option value="dice-roll">Dice Roll</option>
-    </select>
-    <div class="attr-display">
-        <ul class="attr-result">
-        </ul>
-    </div>
+<main>
+    <p>
+    First, select the method for determining your character's attribute values. (This should have been decided by your DM or group).
+    </p>
+        <label for="attribute-allocation">Select your attribute allocation method:</label>
+        <select name="attribute-allocation">
+            <option value="point-buy">Point Buy</option>
+            <option value="dice-roll">Dice Roll</option>
+        </select>
+        <button id="allocation-selection">OK</button>
+        <div class="attr-display">
+            <ul class="attr-result">
+            </ul>
+        </div>
+</main>
 </body>
 </html>

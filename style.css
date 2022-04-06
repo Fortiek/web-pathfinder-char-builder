@@ -1,13 +1,26 @@
 :root{
-    margin: 0;
     --prefers-light-bg: #cfcfcf;
     --prefers-dark-bg: #222;
     font-size: 16px;
 }
+.page-header{
+    padding: 1rem;
+    margin: 0;
+    background: radial-gradient(rgba(55, 55, 55, .8), rgba(222, 222, 222, 0.5));  
+}
+.page-header p{
+    text-align: center;
+    font-style: italic;
+}
 body{
-    padding: 1em 2em;
+    margin: 0;
     background-color: var(--prefers-dark-bg);
     color: var(--prefers-light-bg);
+}
+body *{
+    margin: .5rem 1rem;
+    padding: .2rem .2rem;
+
 }
 h1{
     text-align: center;
